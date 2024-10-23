@@ -205,7 +205,7 @@ class Tools:
         if not total_frames:
             return False, "Unable to Count The Frames!"
         _progress = f"progress-{time.time()}.txt"
-        cmd = f'''{Var.FFMPEG} -hide_banner -loglevel quiet -progress """{_progress}""" -i """{dl}""" -metadata "Encoded By"="https://github.com/kaif-00z/AutoAnimeBot/" -map 0:v -map 0:a -map 0:s -c:v libx264 -x265-params 'bframes=8:psy-rd=1:ref=3:aq-mode=3:aq-strength=0.8:deblock=1,1' -pix_fmt yuv420p -crf {Var.CRF} -c:a libopus -b:a 32k -ac 2 -ab 32k -vbr 2 -level 3.1 -threads {self.ffmpeg_threads} -preset veryfast """{out}""" -y'''
+        cmd = f'''{Var.FFMPEG} -hide_banner -loglevel quiet -progress """{_progress}""" -i """{dl}""" -metadata "Encoded By"="@Ani3Lix_Clan" -map 0:v -map 0:a -map 0:s -c:v libx264 -x265-params 'bframes=8:psy-rd=1:ref=3:aq-mode=3:aq-strength=0.8:deblock=1,1' -pix_fmt yuv420p -crf {Var.CRF} -c:a libopus -b:a 32k -ac 2 -ab 32k -vbr 2 -level 3.1 -threads {self.ffmpeg_threads} -preset veryfast """{out}""" -y'''
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
