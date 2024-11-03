@@ -174,6 +174,6 @@ class AdminUtils:
             self.telethon_version,
             self.pyrogram_version,
             self.system,
-            "[OngoingAnimeBot](t.me/@ani3Lix_Clan)",
+            "[OngoingAnimeBot](t.me/ani3Lix_Clan)",
         )
         await e.reply(text, file="assest/about.jpg", link_preview=False)
