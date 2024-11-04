@@ -56,12 +56,12 @@ async def _start(event):
             pass
         else:
             return await xnx.edit(
-                f"**Please Join The Following Channel To Use This Bot 🫡**",
+                f"**Please Join The Following Channel To Use This Bot**",
                 buttons=[
-                    [Button.url("🚀 JOIN CHANNEL", url=Var.FORCESUB_CHANNEL_LINK)],
+                    [Button.url("JOIN CHANNEL", url=Var.FORCESUB_CHANNEL_LINK)],
                     [
                         Button.url(
-                            "♻️ REFRESH",
+                            "Refresh again",
                             url=f"https://t.me/{((await bot.get_me()).username)}?start={msg_id}",
                         )
                     ],
@@ -84,13 +84,13 @@ async def _start(event):
                 buttons=admin.admin_panel(),
             )
         await event.reply(
-            f"**Enjoy Ongoing Anime's Best Encode 24/7 🫡**",
+            f"**Enjoy Ongoing Anime Episode's Best Encode 24/7 🫡**",
             buttons=[
                 [
-                    Button.url("👨‍💻 DEV", url="t.me/kaif_00z"),
+                    Button.url("Main Channel", url="t.me/ani3lix_clan"),
                     Button.url(
-                        "💖 OPEN SOURCE",
-                        url="https://github.com/kaif-00z/AutoAnimeBot/",
+                        "Ongoing Channel",
+                        url="https://t.me/Ongoing_Anime_Episodes",
                     ),
                 ]
             ],
